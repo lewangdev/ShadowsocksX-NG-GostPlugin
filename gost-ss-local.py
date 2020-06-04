@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+import json
+import os
+import sys
+
+
+def get_ss_local_config(argv_list):
+    filename = None
+    length = len(argv_list)
+    for idx in range(length):
+        if argv_list[idx] == '-c':
+            filename = argv_list[idx + 1] if idx + 1 < length else None
+            break
+
+    if filename is None:
+        return None
+
+    with open(filename, 'r') as f:
+        return json.loads(f.read())
+
+def write_gost_config_file(server_address, server_port, local_address, local_port, password):
+    gost_config = {
+        "Retries": 3,
+        "Debug": False,
+        "ServeNodes": ["socks5://%s:%s" % (local_address, local_port)],
+        "ChainNodes": ["https://%s@%s:%s" % (password, server_address, server_port)]
+    }
+
+    with open('gost-config.json', 'w') as f:
+        f.write(json.dumps(gost_config, sort_keys=True, indent=4, separators=(',', ': ')))
+
+if __name__ == '__main__':
+    ss_local_config = get_ss_local_config(sys.argv)
+    cmd = None
+    if ss_local_config.get('plugin', None) == 'plugins/gost':
+        plugin_opts = ss_local_config.get('plugin_opts', '')
+        if plugin_opts == '':
+            server_address = ss_local_config.get('server')
+            server_port = ss_local_config.get('server_port')
+            local_address = ss_local_config.get('local_address')
+            local_port = ss_local_config.get('local_port')
+            password = ss_local_config.get('password')
+
+            write_gost_config_file(server_address, server_port, local_address, local_port, password)
+            cmd = "gost/gost -C gost-config.json"
+        else:
+            cmd = 'gost/gost %s' % plugin_opts
+    else:
+        cmd = "DYLD_LIBRARY_PATH=ss-local-latest:plugins ss-local-latest/ss-local.bak %s" % " ".join(sys.argv[1:])
+
+    if cmd is not None:
+        os.system(cmd)
