@@ -47,7 +47,7 @@ if __name__ == '__main__':
         else:
             cmd = 'gost/gost %s' % plugin_opts
     else:
-        cmd = "DYLD_LIBRARY_PATH=ss-local-latest:plugins `/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local.bak` %s" % " ".join(sys.argv[1:])
+        cmd = "DYLD_LIBRARY_PATH=ss-local-latest:plugins /Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local.bak %s" % " ".join(sys.argv[1:])
 
     if cmd is not None:
         os.system(cmd)
