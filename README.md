@@ -6,7 +6,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 
 自从查资料代理工具换成 [gost](https://github.com/ginuerzh/gost) 之后，由于 MacOS 上没有 gost 专用的智能代理（也就是该翻的时候翻，不用翻的时候不翻）桌面客户端，所以需要用 gost 在本地把 https 代理转成 ss 后再继续使用 ShadowsocksX-NG。 虽然可以用 launchctl 启动一个 gost 后台服务，但是用起来还是不太方便。
 
-看了下 ShadowsocksX-NG 是如何工作的，发现 ShadowsocksX-NG 会在本地启动 ss-local 进程跑一个 sock5 服务，而且 ShadowsocksX-NG 实现智能代理的逻辑与 ss-local 并没有太多的关系，只要在本地能提供一个 sock5 服务就够了。 
+看了下 ShadowsocksX-NG 是如何工作的，发现 ShadowsocksX-NG 会在本地启动 ss-local 进程跑一个 socks5 服务，而且 ShadowsocksX-NG 实现智能代理的逻辑与 ss-local 并没有太多的关系，只要在本地能提供一个 socks5 服务就够了。 
 
 于是写了以下脚本替换了 ShadowsocksX-NG 安装目录下的 ss-local(替换之前要备份一下这个文件)
 
