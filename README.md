@@ -2,7 +2,7 @@
 
 ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost 
 
-## 为啥编写这个脚本
+## 原由
 
 自从查资料代理工具换成 [gost](https://github.com/ginuerzh/gost) 之后，由于 MacOS 上没有 gost 专用的智能代理（也就是该翻的时候翻，不用翻的时候不翻）桌面客户端，所以需要用 gost 在本地把 https 代理转成 ss 后再继续使用 ShadowsocksX-NG。 虽然可以用 launchctl 启动一个 gost 后台服务，但是用起来还是不太方便。
 
@@ -41,12 +41,12 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 
 ## 设置
 
-ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address， Port， Password， Plugin，Plugin Opts 来设置 gost。在 Plugin 使用 gost 之后，各参数设置说明如下: 
+ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address，Port，Password，Plugin，Plugin Opts 来设置 gost。在 Plugin 使用 gost 之后，各参数设置说明如下: 
 
-0. Plugin，如何希望使用 gost，那么 Plugin 需要填写 gost，例如 `gost`，不填或填些其它内容，则与 ShadowsocksX-NG 原行为一致
+0. Plugin，如果希望使用 gost，那么 Plugin 需要填写 gost，例如 `gost`，不填或填其它内容，则与 ShadowsocksX-NG 原行为一致
 1. Address, 表示 gost 的服务器地址，可以是 IP 或域名, 例如填写 `2.3.4.5`
 2. Port, 表示 gost 的端口, 例如填写 `8443`
-3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `user@letmein88`
+3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `user:letmein88`
 4. Plugin Opts, 如果填写了插件参数，则前 1-3 的设置无效，并且会把 Plugin Opts 填写的内容直接全部传给 gost 命令。
 
 1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置
