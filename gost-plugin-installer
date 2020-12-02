@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -e
+[ -n "$GOST_PLUGIN_DEBUG" ] && set -x
+
+if [ -z "$GOST_PLUGIN_ROOT" ]; then
+  GOST_PLUGIN_ROOT="${HOME}/Library/Application Support/ShadowsocksX-NG/gost"
+fi
+
+colorize() {
+  if [ -t 1 ]; then printf "\e[%sm%s\e[m" "$1" "$2"
+  else echo -n "$2"
+  fi
+}
+
+# Checks for gost plugin root directory, and suggests to remove it for installing
+if [ -d "${GOST_PLUGIN_ROOT}" ]; then
+  { echo
+    colorize 1 "WARNING"
+    echo ": Can not proceed with installation. Kindly remove the '${GOST_PLUGIN_ROOT}' directory first."
+    echo
+  } >&2
+    exit 1
+fi
+
+mkdir "${GOST_PLUGIN_ROOT}"
+GOST_VERSION=2.11.1
+curl -L "https://github.com/ginuerzh/gost/releases/download/v${GOST_VERSION}/gost-darwin-amd64-${GOST_VERSION}.gz" --output "${GOST_PLUGIN_ROOT}/gost.gz"
+gunzip "${GOST_PLUGIN_ROOT}/gost.gz"
+chmod +x "${GOST_PLUGIN_ROOT}/gost"
+
+mv "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local" "/Applications/ShadowsocksX-NG.app/Contents/Resources/real-ss-local"
+curl -L "https://github.com/lewangdev/gost-ss-local/raw/master/ss-local" --output "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
+chmod +x "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
+
+
+echo "gost plugin is installed."
+
