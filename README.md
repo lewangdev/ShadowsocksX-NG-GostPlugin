@@ -1,4 +1,4 @@
-# gost-ss-local
+# ShadowsocksX-NG Gost Plugin
 
 ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost 
 
@@ -50,7 +50,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 把上面的手动安装的过程变成自动安装的脚本
 
 ```bash
-curl -L https://github.com/lewangdev/gost-ss-local/raw/master/gost-plugin-installer | bash
+curl -L https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/master/gost-plugin-installer | bash
 ```
 
 ## 设置
@@ -60,7 +60,7 @@ ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss
 0. Plugin，如果希望使用 gost，那么 Plugin 需要填写 gost，例如 `gost`，不填或填其它内容，则与 ShadowsocksX-NG 原行为一致
 1. Address, 表示 gost 的服务器地址，可以是 IP 或域名, 例如填写 `2.3.4.5`
 2. Port, 表示 gost 的端口, 例如填写 `8443`
-3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `user:letmein88`
+3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `gost:gost`
 4. Plugin Opts, 如果填写了插件参数，则前 1-3 的设置无效，并且会把 Plugin Opts 填写的内容直接全部传给 gost 命令。
 
 1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置
@@ -68,5 +68,5 @@ ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss
 
 ## 说明
 
-目前脚本只测试了 gost，对于 [SIP003 Plugin](https://github.com/shadowsocks/ShadowsocksX-NG/wiki/SIP003-Plugin) 是否影响没有做过测试，如果有问题，欢迎前往[代码仓库](https://github.com/lewangdev/gost-ss-local) PR。关于如何在 [shadowsocks-windows](https://github.com/shadowsocks/shadowsocks-windows) 使用 gost，将在下一篇文章中介绍 。
+目前脚本只测试了 gost，对于 [SIP003 Plugin](https://github.com/shadowsocks/ShadowsocksX-NG/wiki/SIP003-Plugin) 是否影响没有做过测试，如果有问题，欢迎前往[代码仓库](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin) 提 [Issues](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/issues)。
 
