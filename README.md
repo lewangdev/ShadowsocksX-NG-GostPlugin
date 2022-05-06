@@ -69,17 +69,21 @@ gost -L https://gost:gost@1.2.3.4:8443
 3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `gost:gost`
 4. Plugin Opts, 如果填写了插件参数，则前 1-3 的设置无效，并且会把 Plugin Opts 填写的内容直接全部传给 gost 命令。
 
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-1.jpg">
+  <img width="60%" src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-1.jpg">
 </div>
+
 
 1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置，例如与前面 1-3 等价的 Plugin Opts 配置为 `-L socks5://127.0.0.1:1086 -F https://gost:gost@1.2.3.4:8443`
 
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-2.jpg">
+  <img width="60%" src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-2.jpg">
 </div>
+
 
 ## 说明
 
-目前脚本只测试了 gost，对于 [SIP003 Plugin](https://github.com/shadowsocks/ShadowsocksX-NG/wiki/SIP003-Plugin) 是否影响没有做过测试，如果有问题，欢迎前往[代码仓库](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin) 提 [Issues](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/issues)。
+目前脚本只测试了 gost，对于 [SIP003 Plugin](https://github.com/shadowsocks/ShadowsocksX-NG/wiki/SIP003-Plugin) 是否影响没有做过测试，如果有问题，欢迎前往[代码仓库](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin)提 [Issues](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/issues)。
 
