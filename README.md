@@ -55,10 +55,10 @@ curl -L https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/master/gost-plu
 
 ## 设置
 
-ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address，Port，Password，Plugin，Plugin Opts 来设置 gost。假设 gost 在服务器上是这样启动的：
+ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address，Port，Password，Plugin，Plugin Opts 来设置 gost。假设 gost 在服务器 1.2.3.4 上是这样启动的：
 
 ```
-gost -L https://gost:gost@1.2.3.4:8443
+gost -L https://gost:gost@:8443
 ```
 
 那么在 Plugin 使用 gost 之后，各参数设置如下: 
