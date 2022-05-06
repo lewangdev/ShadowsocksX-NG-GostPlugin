@@ -55,16 +55,29 @@ curl -L https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/master/gost-plu
 
 ## 设置
 
-ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address，Port，Password，Plugin，Plugin Opts 来设置 gost。在 Plugin 使用 gost 之后，各参数设置说明如下: 
+ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address，Port，Password，Plugin，Plugin Opts 来设置 gost。假设 gost 在服务器上是这样启动的：
+
+```
+gost -L https://gost:gost@1.2.3.4:8443
+```
+
+那么在 Plugin 使用 gost 之后，各参数设置如下: 
 
 0. Plugin，如果希望使用 gost，那么 Plugin 需要填写 gost，例如 `gost`，不填或填其它内容，则与 ShadowsocksX-NG 原行为一致
-1. Address, 表示 gost 的服务器地址，可以是 IP 或域名, 例如填写 `2.3.4.5`
+1. Address, 表示 gost 的服务器地址，可以是 IP 或域名, 例如填写 `1.2.3.4`
 2. Port, 表示 gost 的端口, 例如填写 `8443`
 3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `gost:gost`
 4. Plugin Opts, 如果填写了插件参数，则前 1-3 的设置无效，并且会把 Plugin Opts 填写的内容直接全部传给 gost 命令。
 
-1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-1.jpg">
+</div>
 
+1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置，例如与前面 1-3 等价的 Plugin Opts 配置为 `-L socks5://127.0.0.1:1086 -F https://gost:gost@1.2.3.4:8443`
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-2.jpg">
+</div>
 
 ## 说明
 
