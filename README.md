@@ -71,7 +71,7 @@ gost -L https://gost:gost@:8443
 
 
 <div align="center">
-  <img width="60%" src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-1.jpg">
+  <img width="60%" src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-1.png">
 </div>
 
 
@@ -79,7 +79,7 @@ gost -L https://gost:gost@:8443
 
 
 <div align="center">
-  <img width="60%" src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-2.jpg">
+  <img width="60%" src="https://raw.githubusercontent.com/lewangdev/picb0/master/shadowsocksX-NG-GostPlugin-2.png">
 </div>
 
 
