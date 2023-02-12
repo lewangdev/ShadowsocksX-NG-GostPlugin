@@ -24,7 +24,7 @@ def write_gost_config_file(server_address, server_port, local_address, local_por
         "Retries": 3,
         "Debug": False,
         "ServeNodes": ["socks5://%s:%s" % (local_address, local_port)],
-        "ChainNodes": ["https://%s@%s:%s" % (password, server_address, server_port)]
+        "ChainNodes": ["wss://%s@%s:%s" % (password, server_address, server_port)]
     }
 
     with open('gost-config.json', 'w') as f:
