@@ -50,7 +50,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 把上面的手动安装的过程变成自动安装的脚本
 
 ```bash
-curl -L https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/master/gost-plugin-installer | bash
+curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/master/gost-plugin-installer | bash
 ```
 
 ## 设置
