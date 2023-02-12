@@ -13,7 +13,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 ```bash
 #!/bin/sh -
 
-#/opt/gost/gost -L=sock5://:1086 -F=https://USER:PASSWD@1.1.1.1:1234
+#/opt/gost/gost -L=sock5://:1086 -F=wss://username:password@1.1.1.1:443
 
 # Use gost.json
 #{
@@ -23,7 +23,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 #        "socks5://127.0.0.1:1086"
 #    ],
 #    "ChainNodes": [
-#        "https://USER:PASSWD@1.1.1.1:1234"
+#        "wss://username:password@1.1.1.1:443"
 #    ]
 #}
 /opt/gost/gost -C /opt/gost/gost.json
@@ -58,15 +58,15 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/master/gost-
 ShadowsocksX-NG 客户端的配置并不能与 gost 的配置对应上，gost-ss-local 使用了 Address，Port，Password，Plugin，Plugin Opts 来设置 gost。假设 gost 在服务器 1.2.3.4 上是这样启动的：
 
 ```
-gost -L https://gost:gost@:8443
+gost -L wss://username:password@:443
 ```
 
 那么在 Plugin 使用 gost 之后，各参数设置如下: 
 
 0. Plugin，如果希望使用 gost，那么 Plugin 需要填写 gost，例如 `gost`，不填或填其它内容，则与 ShadowsocksX-NG 原行为一致
 1. Address, 表示 gost 的服务器地址，可以是 IP 或域名, 例如填写 `1.2.3.4`
-2. Port, 表示 gost 的端口, 例如填写 `8443`
-3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `USER:PASSWD`, 例如填写 `gost:gost`
+2. Port, 表示 gost 的端口, 例如填写 `443`
+3. Password, 由于 ShadowsocksX-NG 不能设置用户名，密码这里需要填写 gost 的用户名和密码，格式为 `username:password`, 例如填写 `username:password`
 4. Plugin Opts, 如果填写了插件参数，则前 1-3 的设置无效，并且会把 Plugin Opts 填写的内容直接全部传给 gost 命令。
 
 
@@ -75,7 +75,7 @@ gost -L https://gost:gost@:8443
 </div>
 
 
-1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置，例如与前面 1-3 等价的 Plugin Opts 配置为 `-L socks5://127.0.0.1:1086 -F https://gost:gost@1.2.3.4:8443`
+1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置，例如与前面 1-3 等价的 Plugin Opts 配置为 `-L socks5://127.0.0.1:1086 -F wss://username:password@1.2.3.4:443`
 
 
 <div align="center">
