@@ -4,7 +4,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 
 ## 原由
 
-自从查资料上网工具换成 [gost](https://github.com/ginuerzh/gost) 之后，由于 MacOS 上没有 gost 专用的智能代理（也就是该翻的时候翻，不用翻的时候不翻）桌面客户端，所以需要用 gost 在本地把 https 代理转成 ss 后再继续使用 ShadowsocksX-NG。 虽然可以用 launchctl 启动一个 gost 后台服务，但是用起来还是不太方便。
+自从查资料上网工具换成 [gost](https://github.com/ginuerzh/gost) 之后，由于 MacOS 上没有 gost 专用的智能代理（也就是该翻的时候翻，不用翻的时候不翻）桌面客户端，所以需要用 gost 在本地把 wss 代理转成 ss 后再继续使用 ShadowsocksX-NG。 虽然可以用 launchctl 启动一个 gost 后台服务，但是用起来还是不太方便。
 
 看了下 ShadowsocksX-NG 是如何工作的： ShadowsocksX-NG 会在本地启动 ss-local 进程跑一个 socks5 服务，而且 ShadowsocksX-NG 实现智能代理的逻辑与 ss-local 并没有太多的关系，所以只要在想办法本地能提供一个 socks5 服务就够了。 
 
@@ -75,7 +75,7 @@ gost -L wss://username:password@:443
 </div>
 
 
-1-3 的设置要求 gost 服务器端为 https 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置，例如与前面 1-3 等价的 Plugin Opts 配置为 `-L socks5://127.0.0.1:1086 -F wss://username:password@1.2.3.4:443`
+1-3 的设置要求 gost 服务器端为 wss 代理，如果为其它类型的代理，可以通过设置 Plugin Opts 的参数来设置，例如与前面 1-3 等价的 Plugin Opts 配置为 `-L socks5://127.0.0.1:1086 -F wss://username:password@1.2.3.4:443`
 
 
 <div align="center">
@@ -85,5 +85,5 @@ gost -L wss://username:password@:443
 
 ## 说明
 
-目前脚本只测试了 gost，对于 [SIP003 Plugin](https://github.com/shadowsocks/ShadowsocksX-NG/wiki/SIP003-Plugin) 是否影响没有做过测试，如果有问题，欢迎前往[代码仓库](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin)提 [Issues](https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/issues)。
+目前脚本只测试了 gost，对于 [SIP003 Plugin](https://github.com/shadowsocks/ShadowsocksX-NG/wiki/SIP003-Plugin) 是否影响没有做过测试，如果有问题，欢迎前往[代码仓库](https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin)提 [Issues](https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/issues)。
 
