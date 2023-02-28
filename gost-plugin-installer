@@ -30,7 +30,7 @@ gunzip "${GOST_PLUGIN_ROOT}/gost.gz"
 chmod +x "${GOST_PLUGIN_ROOT}/gost"
 
 mv "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local" "/Applications/ShadowsocksX-NG.app/Contents/Resources/real-ss-local"
-curl -L "https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/master/ss-local" --output "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
+curl -L "https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/main/ss-local" --output "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
 chmod +x "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
 
 
