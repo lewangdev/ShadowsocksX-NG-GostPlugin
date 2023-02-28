@@ -42,7 +42,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 
 1. 下载 [gost](https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-darwin-amd64-2.11.1.gz) 并解压到目录 `"${HOME}/Library/Application Support/ShadowsocksX-NG/gost"`， 确保 `"${HOME}/Library/Application Support/ShadowsocksX-NG/gost"` 目录下可执行文件名称为 `gost`
 2. 备份 `/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local` 为 `/Applications/ShadowsocksX-NG.app/Contents/Resources/real-ss-local` 
-3. 用 `https://raw.githubusercontent.com/lewangdev/gost-ss-local/master/ss-local` 替换 `/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local` 
+3. 用 `https://raw.githubusercontent.com/lewangdev/gost-ss-local/main/ss-local` 替换 `/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local` 
 4. 退出 ShadowsocksX-NG 应用，再打开即可正常使用
 
 ## 通过自动安装脚本安装插件
@@ -50,7 +50,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 把上面的手动安装的过程变成自动安装的脚本
 
 ```bash
-curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/master/gost-plugin-installer | bash
+curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-plugin-installer | bash
 ```
 
 ## 设置
