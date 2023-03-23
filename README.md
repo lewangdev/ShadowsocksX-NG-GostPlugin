@@ -39,5 +39,5 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-pl
 5. Plugin Opts, 为 gost 的用户名和密码, 格式为 `username:password`
 
 <div align="center">
-  <img width="60%" src="https://user-images.githubusercontent.com/1455685/227181149-46f1ffbd-e3be-4b8d-a25b-de500f99ca85.png">
+  <img width="90%" src="https://user-images.githubusercontent.com/1455685/227181149-46f1ffbd-e3be-4b8d-a25b-de500f99ca85.png">
 </div>
