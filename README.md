@@ -32,6 +32,8 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-pl
 
 ## 设置
 
+> 如果使用 cloudflare 进行代理, 建议添加 2 个服务器, 一个是直连服务器, 另外一个通过 cloudflare 代理
+
 1. Address, 表示 gost 的服务器地址，可以是 IP 或域名, 例如填写 `1.2.3.4`
 2. Port, 表示 gost 的服务器端口, 例如填写 `443`
 3. Encryption, 固定为 `chacha20-ietf-poly1305`
@@ -41,3 +43,7 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-pl
 <div align="center">
   <img width="90%" src="https://user-images.githubusercontent.com/1455685/227181149-46f1ffbd-e3be-4b8d-a25b-de500f99ca85.png">
 </div>
+
+## 远程在服务器上安装 gost
+
+[请使用 gost-install.ipynb 远程安装](https://github.com/lewangdev/gost-install.ipynb)
