@@ -24,14 +24,14 @@ if [ -d "${GOST_PLUGIN_ROOT}" ]; then
 fi
 
 mkdir "${GOST_PLUGIN_ROOT}"
-GOST_VERSION=2.11.1
+GOST_VERSION=2.11.5
 curl -L "https://github.com/ginuerzh/gost/releases/download/v${GOST_VERSION}/gost-darwin-amd64-${GOST_VERSION}.gz" --output "${GOST_PLUGIN_ROOT}/gost.gz"
 gunzip "${GOST_PLUGIN_ROOT}/gost.gz"
 chmod +x "${GOST_PLUGIN_ROOT}/gost"
 
-mv "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local" "/Applications/ShadowsocksX-NG.app/Contents/Resources/real-ss-local"
-curl -L "https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/main/ss-local" --output "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
-chmod +x "/Applications/ShadowsocksX-NG.app/Contents/Resources/ss-local"
+SS_PLUGINS_ROOT="${HOME}/Library/Application Support/ShadowsocksX-NG/plugins"
+curl -L "https://github.com/gost-x/ShadowsocksX-NG-GostPlugin/raw/main/gost-plugin" --output "${SS_PLUGINS_ROOT}/gost-plugin"
+chmod +x "${SS_PLUGINS_ROOT}/gost-plugin"
 
 
 echo "Gost plugin installed."
