@@ -12,11 +12,11 @@ ShadowsocksX-NG 是这样工作的： ShadowsocksX-NG 会在本地启动 ss-loca
 
 ## 安装插件前的准备
 
-1. 安装好 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.10.1/ShadowsocksX-NG.dmg) 并至少启动过一次
+安装好 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.10.1/ShadowsocksX-NG.dmg) 并至少启动过一次
 
 ## 手动安装插件
 
-手动安装过程包括以下几个步骤，主要是文件的替换：
+手动安装过程包括以下几个步骤：
 
 1. 下载 [gost](https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-darwin-amd64-2.11.1.gz) 并解压到目录 `"${HOME}/Library/Application Support/ShadowsocksX-NG/gost"`， 确保 `"${HOME}/Library/Application Support/ShadowsocksX-NG/gost"` 目录下可执行文件名称为 `gost`
 2. 下载 `https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/releases/download/v0.0.2/gost-plugin.gz` 到 `${HOME}/Library/Application Support/ShadowsocksX-NG/plugins`, 并且解压为 `gost-plugin`
@@ -38,7 +38,8 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-pl
 2. Port, 表示 gost 的服务器端口, 例如填写 `443`
 3. Encryption, 固定为 `chacha20-ietf-poly1305`
 4. Password, 固定为 `123456`
-5. Plugin Opts, 为 gost 的用户名和密码, 格式为 `username:password`
+5. Plugin, 固定为 `gost-plugin` 
+6. Plugin Opts, 为 gost 的用户名和密码, 格式为 `username:password`
 
 <div align="center">
   <img width="90%" src="https://user-images.githubusercontent.com/1455685/227181149-46f1ffbd-e3be-4b8d-a25b-de500f99ca85.png">
