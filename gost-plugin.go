@@ -13,7 +13,7 @@ func main() {
 	ssRemotePort := os.Getenv("SS_REMOTE_PORT")
 	ssPluginOptions := os.Getenv("SS_PLUGIN_OPTIONS")
 
-	cmdArgs := fmt.Sprintf("-L=ss://chacha20-ietf-poly1305:123456@%s:%s -F=wss://%s@%s:%s", ssLocalHost, ssLocalPort, ssPluginOptions, ssRemoteHost, ssRemotePort)
+	cmdArgs := fmt.Sprintf("-L=ss://chacha20-ietf-poly1305:123456@%s:%s -F=mwss://%s@%s:%s", ssLocalHost, ssLocalPort, ssPluginOptions, ssRemoteHost, ssRemotePort)
 	cmd := exec.Command("./gost/gost", cmdArgs)
 	err := cmd.Run()
 	if err != nil {

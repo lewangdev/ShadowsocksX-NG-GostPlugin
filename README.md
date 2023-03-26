@@ -18,7 +18,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 下面的手动安装过程对应的自动安装脚本
 
 ```bash
-curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-plugin-installer | bash
+curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/feat/mwss/gost-plugin-installer | bash
 ```
 
 
@@ -27,7 +27,7 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-pl
 手动安装过程包括以下几个步骤：
 
 1. 下载 [gost](https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-darwin-amd64-2.11.1.gz) 并解压到目录 `"${HOME}/Library/Application Support/ShadowsocksX-NG/gost"`， 确保 `"${HOME}/Library/Application Support/ShadowsocksX-NG/gost"` 目录下可执行文件名称为 `gost`
-2. 下载 `https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/releases/download/v0.0.2/gost-plugin.gz` 到 `${HOME}/Library/Application Support/ShadowsocksX-NG/plugins`, 并且解压为 `gost-plugin`
+2. 下载 `https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/releases/download/v0.0.2/gost-plugin-mwss.gz` 到 `${HOME}/Library/Application Support/ShadowsocksX-NG/plugins`, 并且解压为 `gost-plugin-mwss`
 3. 退出 ShadowsocksX-NG 应用，再打开即可正常使用
 
 ## 设置
@@ -38,7 +38,7 @@ curl -L https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/raw/main/gost-pl
 2. Port, 表示 gost 的服务器端口, 例如填写 `443`
 3. Encryption, 固定为 `chacha20-ietf-poly1305`
 4. Password, 固定为 `123456`
-5. Plugin, 固定为 `gost-plugin` 
+5. Plugin, 固定为 `gost-plugin-mwss` 
 6. Plugin Opts, 为 gost 的用户名和密码, 格式为 `username:password`
 
 <div align="center">

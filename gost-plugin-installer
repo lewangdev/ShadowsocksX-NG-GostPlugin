@@ -29,10 +29,11 @@ curl -L "https://github.com/ginuerzh/gost/releases/download/v${GOST_VERSION}/gos
 gunzip "${GOST_PLUGIN_ROOT}/gost.gz"
 chmod +x "${GOST_PLUGIN_ROOT}/gost"
 
+GOST_PLUGIN_NAME=gost-plugin-mwss
 SS_PLUGINS_ROOT="${HOME}/Library/Application Support/ShadowsocksX-NG/plugins"
-curl -L "https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/releases/download/v0.0.2/gost-plugin.gz" --output "${SS_PLUGINS_ROOT}/gost-plugin.gz"
-gunzip "${SS_PLUGINS_ROOT}/gost-plugin.gz"
-chmod +x "${SS_PLUGINS_ROOT}/gost-plugin"
+curl -L "https://github.com/lewangdev/ShadowsocksX-NG-GostPlugin/releases/download/v0.0.2/${GOST_PLUGIN_NAME}.gz" --output "${SS_PLUGINS_ROOT}/${GOST_PLUGIN_NAME}.gz"
+gunzip "${SS_PLUGINS_ROOT}/${GOST_PLUGIN_NAME}.gz"
+chmod +x "${SS_PLUGINS_ROOT}/${GOST_PLUGIN_NAME}"
 
 
 echo "Gost plugin installed."

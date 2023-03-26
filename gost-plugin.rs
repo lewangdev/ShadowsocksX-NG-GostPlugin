@@ -9,7 +9,7 @@ fn main() {
     let ss_plugin_options = env::var("SS_PLUGIN_OPTIONS").unwrap();
 
     let cmd = format!(
-        "./gost/gost -L=ss://chacha20-ietf-poly1305:123456@{}:{} -F=wss://{}@{}:{}",
+        "./gost/gost -L=ss://chacha20-ietf-poly1305:123456@{}:{} -F=mwss://{}@{}:{}",
         ss_local_host, ss_local_port, ss_plugin_options, ss_remote_host, ss_remote_port
     );
 
