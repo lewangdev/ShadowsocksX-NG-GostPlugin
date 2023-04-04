@@ -14,7 +14,7 @@ func main() {
 	ssPluginOptions := os.Getenv("SS_PLUGIN_OPTIONS")
 
 	cmdArgsL := fmt.Sprintf("ss://chacha20-ietf-poly1305:123456@%s:%s", ssLocalHost, ssLocalPort)
-	cmdArgsF := fmt.Sprintf("https://%s@%s:%s", ssPluginOptions, ssRemoteHost, ssRemotePort)
+	cmdArgsF := fmt.Sprintf("wss://%s@%s:%s", ssPluginOptions, ssRemoteHost, ssRemotePort)
 	cmd := exec.Command("./gost/gost", "-L", cmdArgsL, "-F", cmdArgsF)
 	err := cmd.Run()
 	if err != nil {
