@@ -13,8 +13,9 @@ func main() {
 	ssRemotePort := os.Getenv("SS_REMOTE_PORT")
 	ssPluginOptions := os.Getenv("SS_PLUGIN_OPTIONS")
 
-	cmdArgs := fmt.Sprintf("-L=ss://chacha20-ietf-poly1305:123456@%s:%s -F=wss://%s@%s:%s", ssLocalHost, ssLocalPort, ssPluginOptions, ssRemoteHost, ssRemotePort)
-	cmd := exec.Command("./gost/gost", cmdArgs)
+	cmdArgsL := fmt.Sprintf("ss://chacha20-ietf-poly1305:123456@%s:%s", ssLocalHost, ssLocalPort)
+	cmdArgsF := fmt.Sprintf("wss://%s@%s:%s", ssPluginOptions, ssRemoteHost, ssRemotePort)
+	cmd := exec.Command("./gost/gost", "-L", cmdArgsL, "-F", cmdArgsF)
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println("运行命令失败：", err)
