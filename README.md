@@ -10,7 +10,7 @@ ShadowsocksX-NG 的 gost 插件脚本，方便在 ShadowsocksX-NG 中使用 gost
 
 ## 安装插件前的准备
 
-安装好 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.10.1/ShadowsocksX-NG.dmg) 并至少启动过一次
+安装好 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.10.0/ShadowsocksX-NG.dmg) 并至少启动过一次
 
 
 ## 通过自动安装脚本安装插件
